@@ -53,7 +53,7 @@ const DashBoard = () => {
 
   // Handle refresh
   const handleRefresh = () => {
-    window.location.href = '/';
+    window.location.href = '/dashboard';
   };
   // Handle add repository
   const handleAddRepository = () => {
