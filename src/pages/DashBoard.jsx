@@ -42,10 +42,10 @@ const DashBoard = () => {
     { title: "digital-library", type: "Public", language: "Ruby", size: "4678 KB", updated: "Updated 5 days ago" },
     { title: "chatbot-framework", type: "Private", language: "Python", size: "5591 KB", updated: "Updated 2 days ago" },
     { title: "personal-blog", type: "Public", language: "HTML/CSS", size: "1836 KB", updated: "Updated 1 day ago" },
-];
+  ];
 
   // Filter repositories based on search term
-  const filteredRepositories = repositories.filter(repo => 
+  const filteredRepositories = repositories.filter(repo =>
     repo.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     repo.language.toLowerCase().includes(searchTerm.toLowerCase()) ||
     repo.type.toLowerCase().includes(searchTerm.toLowerCase())
@@ -53,10 +53,8 @@ const DashBoard = () => {
 
   // Handle refresh
   const handleRefresh = () => {
-    // Reload the page
-    window.location.reload();
+    window.location.href = '/';
   };
-
   // Handle add repository
   const handleAddRepository = () => {
     // Show a toast message
@@ -79,8 +77,8 @@ const DashBoard = () => {
               </div>
               <div className="mt-4 lg:mt-0 flex flex-row items-center gap-3">
                 {/* Refresh Button */}
-                <button 
-                  onClick={handleRefresh} 
+                <button
+                  onClick={handleRefresh}
                   className="hover:bg-[#FAFAFA] flex flex-row items-center gap-2 text-[#414651] text-sm py-2 px-3 rounded-lg border border-[#D5D7DA]"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-5">
@@ -89,8 +87,8 @@ const DashBoard = () => {
                   <span>Refresh All</span>
                 </button>
                 {/* Add Repository Button */}
-                <button 
-                  onClick={handleAddRepository} 
+                <button
+                  onClick={handleAddRepository}
                   className="flex flex-row items-center gap-2 text-white py-2 px-3 rounded-lg text-sm bg-[#1570EF] hover:bg-[#175CD3] border border-[#195fc8] shadow-[inset_0px_0px_0px_2px_rgba(59,_130,_246,_0.5)]"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-5">
